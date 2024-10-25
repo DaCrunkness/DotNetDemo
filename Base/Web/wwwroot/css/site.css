@@ -1,0 +1,166 @@
+/*html {
+  font-size: 14px;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.fileUploadImage {
+    width: 80px;
+    height: 80px;
+}
+
+.custom-box {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+}
+*/
+/*@media (max-width: 767px) {
+    .custom-box {
+        background-color: lightcoral;
+        visibility: hidden;
+    }
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .custom-box {
+        background-color: lightgreen;
+    }
+}
+@media (min-width: 992px) {
+    .custom-box {
+        background-color: lightseagreen;
+    }
+}
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#news-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article {
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+}
+
+    .article img {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+
+
+
+/*Layout 1 - Twin Column Layout*/
+/*body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}*/
+
+/*Layout - Card 2*/
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .card h3 {
+        margin-top: 0;
+    }*/
+
+
+/*Layout 3 - Full-Width Layout with Sections*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 40px;
+    border-bottom: 1px solid #ccc;
+}
+
+    .section:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+
+
+/*Layout4 - Sidebar Layout*/
+/*body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-right: 1px solid #ccc;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}*/

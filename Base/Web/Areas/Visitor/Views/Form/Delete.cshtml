@@ -1,0 +1,72 @@
+﻿@model Models.DataModels.SampleForm
+@{
+    Layout = "_FileLayout";
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h4>Sample Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="TextField" class="control-label"></label>
+                <input asp-for="TextField" class="form-control" disabled />
+                <span asp-validation-for="TextField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberField" class="control-label"></label>
+                <input asp-for="NumberField" class="form-control" disabled />
+                <span asp-validation-for="NumberField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckboxField" class="control-label"></label>
+                <input asp-for="CheckboxField" class="form-control" disabled />
+                <span asp-validation-for="CheckboxField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateField" class="control-label"></label>
+                <input asp-for="DateField" class="form-control" disabled />
+                <span asp-validation-for="DateField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DropdownField" class="control-label"></label>
+                <input asp-for="DropdownField" class="form-control" disabled />
+                <span asp-validation-for="DropdownField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RadioField" class="control-label"></label>
+                <input asp-for="RadioField" class="form-control" disabled />
+                <span asp-validation-for="RadioField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailField" class="control-label"></label>
+                <input asp-for="EmailField" class="form-control" disabled />
+                <span asp-validation-for="EmailField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordField" class="control-label"></label>
+                <input asp-for="PasswordField" class="form-control" disabled />
+                <span asp-validation-for="PasswordField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextAreaField" class="control-label"></label>
+                <input asp-for="TextAreaField" class="form-control" disabled />
+                <span asp-validation-for="TextAreaField" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-6-md-3">
+                    <button type="submit" class="btn btn-danger form-control">Delete</button>
+                </div>
+                <div class="col-6-md-3">
+                    <a asp-area="Visitor" asp-controller="Form" asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

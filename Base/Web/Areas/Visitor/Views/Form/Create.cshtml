@@ -1,0 +1,86 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@model Models.DataModels.SampleForm
+
+@{
+    Layout = "_FileLayout";
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Sample Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" value="@UserManager.GetUserId(User)" />
+
+            <div class="form-group">
+                <label asp-for="TextField" class="control-label"></label>
+                <input asp-for="TextField" class="form-control" />
+                <span asp-validation-for="TextField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumberField" class="control-label"></label>
+                <input asp-for="NumberField" class="form-control" />
+                <span asp-validation-for="NumberField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckboxField" class="control-label"></label>
+                <input type="checkbox" asp-for="CheckboxField" />
+                <span asp-validation-for="CheckboxField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateField" class="control-label"></label>
+                <input asp-for="DateField" class="form-control" />
+                <span asp-validation-for="DateField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DropdownField" class="control-label"></label>
+                <select asp-for="DropdownField">
+                    <option disabled selected>--Select Option--</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+                <span asp-validation-for="DropdownField" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label asp-for="RadioField" class="control-label"></label><br>
+                <input type="radio" id="option1" name="RadioField" value="Option1">
+                <label for="Option1">Option 1</label>
+                <input type="radio" id="option2" name="RadioField" value="Option2">
+                <label for="option2">Option 2</label>
+                <input type="radio" id="option3" name="RadioField" value="Option3">
+                <label for="option3">Option 3</label>
+                <span asp-validation-for="RadioField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailField" class="control-label"></label>
+                <input asp-for="EmailField" class="form-control" />
+                <span asp-validation-for="EmailField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PasswordField" class="control-label"></label>
+                <input asp-for="PasswordField" class="form-control" />
+                <span asp-validation-for="PasswordField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TextAreaField" class="control-label"></label>
+                <input asp-for="TextAreaField" class="form-control" />
+                <span asp-validation-for="TextAreaField" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-6-md-3">
+                    <button type="submit" class="btn btn-primary form-control">Create</button>
+                </div>
+                <div class="col-6-md-3">
+                    <a asp-area="Visitor" asp-controller="Form" asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

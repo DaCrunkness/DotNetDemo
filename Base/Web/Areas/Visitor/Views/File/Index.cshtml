@@ -1,0 +1,60 @@
+﻿@model List<FileForm>
+
+@{
+    Layout = "_FileLayout";
+}
+
+<div class="container">
+
+    <div class="row pt-4 pb-3">
+
+        <div class="col-6">
+            <h2 class="text-primary"> File List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-area="Visitor" asp-controller="File" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Create New File</a>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>TextField</th>
+                <th>NumberField</th>
+                <th>Checkbox Field</th>
+                <th>Date Field</th>
+                <th>Dropdown Field</th>
+                <th>Radio Field</th>
+                <th>Email Field</th>
+                <th>Password Field</th>
+                <th>Text Area  Field</th>
+                <th>File Field</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>@obj.TextField</td>
+                    <td>@obj.NumberField</td>
+                    <td>@obj.CheckboxField</td>
+                    <td>@obj.DateField</td>
+                    <td>@obj.DropdownField</td>
+                    <td>@obj.RadioField</td>
+                    <td>@obj.EmailField</td>
+                    <td>@obj.PasswordField</td>
+                    <td>@obj.TextAreaField</td>
+                    <td><img class="fileUploadImage" src="~/Uploads/@obj.FileField" /></td>
+                    <td>
+                        <div class="w-75 btnbtn-group" role="group">
+                            <a asp-area="Visitor" asp-controller="File" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a asp-area="Visitor" asp-controller="File" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger"><i class="bi bi-trash-fill"></i>Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
